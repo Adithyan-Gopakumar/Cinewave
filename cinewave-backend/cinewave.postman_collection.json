@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "d865e2cf-59c3-4e0c-9980-8c0a1780ba15",
+		"name": "cinewave",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13656927"
+	},
+	"item": [
+		{
+			"name": "users/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "justinjoyn@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Justin",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Joy",
+							"type": "text"
+						},
+						{
+							"key": "contact",
+							"value": "0987654321",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password@123",
+							"type": "text"
+						},
+						{
+							"key": "password_repeat",
+							"value": "password@123",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/users/register/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "justinjoyn@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/users/login/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "screens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "screen_name",
+							"value": "Screen 4",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_count",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_cost",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_count",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_cost",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_count",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_cost",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/screens/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"screens",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "screens",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/screens/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"screens",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "screens/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/screens/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"screens",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "screens/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "screen_name",
+							"value": "Screen 2",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_count",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_cost",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_count",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_cost",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_count",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_cost",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/screens/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"screens",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "screens/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/screens/4",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"screens",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Finding Dory",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Kids & family,Comedy",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2024-03-01",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "English",
+							"type": "text"
+						},
+						{
+							"key": "duration_minutes",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "4.5",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "Dory (Ellen DeGeneres) is a wide-eyed, blue tang fish who suffers from memory loss every 10 seconds or so. The one thing she can remember is that she somehow became separated from her parents as a child. With help from her friends Nemo and Marlin, Dory embarks on an epic adventure to find them. Her journey brings her to the Marine Life Institute, a conservatory that houses diverse ocean species. Dory now knows that her family reunion will only happen if she can save mom and dad from captivity.",
+							"type": "text"
+						},
+						{
+							"key": "cast",
+							"value": "Ellen DeGeneres,Albert Brooks,Ed O'Neil",
+							"type": "text"
+						},
+						{
+							"key": "poster",
+							"value": "https://picsum.photos/seed/picsum/200/300",
+							"type": "text"
+						},
+						{
+							"key": "banner",
+							"value": "https://picsum.photos/seed/picsum/800/200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/movies/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/movies/?order_by=title&order_type=ASC",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "order_by",
+							"value": "title"
+						},
+						{
+							"key": "order_type",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/movies/4",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"movies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Shadows in the Mistt",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Thriller",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2006-09-23",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "Spanish",
+							"type": "text"
+						},
+						{
+							"key": "duration_minutes",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "1.5",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "Young old prove leader name identify itself lawyer life.",
+							"type": "text"
+						},
+						{
+							"key": "cast",
+							"value": "Karen Powers,  Jordan Willis,  Lisa Lutz",
+							"type": "text"
+						},
+						{
+							"key": "poster",
+							"value": "https://picsum.photos/seed/picsum/200/300",
+							"type": "text"
+						},
+						{
+							"key": "banner",
+							"value": "https://picsum.photos/seed/picsum/200/300",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/movies/4",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"movies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/movies/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_timings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "screen_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2023-03-01",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "10:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/show_timings/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"show_timings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_timings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/show_timings/1?date=2023-03-01",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"show_timings",
+						"1"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-03-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_timings/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "screen_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2023-03-01",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "10:20:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/show_timings/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"show_timings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_timings/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/show_timings/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"show_timings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "screen_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "show_timing_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "booking_date",
+							"value": "2023-02-02",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_count",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_cost",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_count",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_cost",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_count",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_cost",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/bookings/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/bookings/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/bookings/6",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"bookings",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "screen_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "show_timing_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "booking_date",
+							"value": "2023-02-01",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_count",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "premium_seat_cost",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_count",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "executive_seat_cost",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_count",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "normal_seat_cost",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/bookings/6",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"bookings",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/bookings/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"bookings",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJqdXN0aW5qb3luQGdtYWlsLmNvbSJ9.bauFf02jvHE-SfsGXH1z1m7ZQlZE_znR6H9KG2fXvTg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
